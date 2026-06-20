@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>发帖工具</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/toastify.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>通用设置</h1>
+    </div>
+    <div class="content">
+      <div id="content-form">
+        <div class="form-group">
+          <label class="form-label" for="public-sheet-url">输入公用表链接</label>
+          <input type="text" id="public-sheet-url" class="form-control" placeholder="请输入表格链接">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="custom-sheet-url">输入个人表链接</label>
+          <input type="text" id="custom-sheet-url" class="form-control" placeholder="请输入表格链接">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="post-sheet-url">输入发帖表链接</label>
+          <input type="text" id="post-sheet-url" class="form-control" placeholder="请输入表格链接">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="api-url">输入 API 链接</label>
+          <input type="text" id="api-url" class="form-control" placeholder="请输入链接">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="messenger-url">输入 Messenger 链接</label>
+          <input type="text" id="messenger-url" class="form-control" placeholder="请输入链接">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="name-select">选择教派</label>
+          <select id="team" class="form-control">
+            <option value="">请选择教派</option>
+            <option value="1d">天主教</option>
+            <option value="2d">基督教</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="name-select">选择名字</label>
+          <select id="name-select" class="form-control">
+            <option value="">请选择名字</option>
+          </select>
+        </div>
+        <button id="get-user-list" class="btn btn-secondary">获取名单</button>
+        <div class="form-group toggle-center">
+          <label class="switch">
+            <input type="checkbox" id="obfuscation">
+            <span class="slider"></span>
+          </label>
+          <span class="toggle-label">字符混淆</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/js/toastify.js" integrity="sha-256-0oNqXz7l/x80qKH23CeLpOb0sV63mvaa9QTm9V/XJE8="></script>
+  <script src="/js/popper.js" integrity="sha-256-whL0tQWoY1Ku1iskqPFvmZ+CHsvmRWx/PIoEvIeWh4I="></script>
+  <script src="/js/options.js" integrity="sha-256-qb+cIL+oWUei1RHXPEFfiB6wPUMYvSixYeR0szV+6+g="></script>
+</body>
+
+</html>

@@ -1,0 +1,330 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(135deg, #87ceeb 0%, #b0e0e6 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.header {
+  padding: 16px 24px 8px 24px;
+  text-align: center;
+}
+
+.mode-switch {
+  display: inline-flex;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  padding: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mode-btn {
+  padding: 8px 20px;
+  background: transparent;
+  border: none;
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #666;
+}
+
+.mode-btn.active {
+  background: #ff69b4;
+  color: white;
+  box-shadow: 0 2px 8px rgba(255, 105, 180, 0.3);
+}
+
+.content {
+  padding: 16px 24px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #555;
+  font-size: 14px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px 16px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #ff69b4;
+  box-shadow: 0 0 0 3px rgba(255, 105, 180, 0.1);
+}
+
+.btn {
+  width: 100%;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: #ff69b4;
+  color: white;
+  box-shadow: 0 4px 16px rgba(255, 105, 180, 0.3);
+}
+
+.btn-primary:hover {
+  background: #ff1493;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 105, 180, 0.4);
+}
+
+.btn-secondary {
+  background: #87ceeb;
+  color: white;
+  box-shadow: 0 4px 16px rgba(135, 206, 235, 0.3);
+}
+
+.btn-secondary:hover {
+  background: #4682b4;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(135, 206, 235, 0.4);
+}
+
+.btn-copy {
+  background: rgba(255, 255, 255, 0.9);
+  color: #ff69b4;
+  border: 1px solid #ff69b4;
+  padding: 8px 20px;
+  box-shadow: 0 2px 8px rgba(255, 105, 180, 0.2);
+}
+
+.btn-copy:hover {
+  background: #ff69b4;
+  color: white;
+  transform: translateY(-1px);
+}
+
+.prompt-list {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 16px;
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.prompt-item {
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.prompt-text {
+  font-size: 14px;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.prompt-item:last-child {
+  border-bottom: none;
+}
+
+.prompt-item:hover {
+  background: rgba(255, 105, 180, 0.1);
+}
+
+.prompt-item.selected {
+  background: rgba(255, 105, 180, 0.15);
+  color: #ff1493;
+  font-weight: 500;
+}
+
+.preview-image {
+  width: 80%;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+  margin: 12px auto;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.preview-text {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 16px;
+  padding: 16px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #666;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  min-height: 60px;
+  display: flex;
+  justify-content: center;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.prompt-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.prompt-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.prompt-list::-webkit-scrollbar-thumb {
+  background: rgba(255, 105, 180, 0.3);
+  border-radius: 2px;
+}
+
+.prompt-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 105, 180, 0.5);
+}
+
+.image-carousel {
+  position: relative;
+  width: 80%;
+  margin: 12px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow {
+  background: rgba(255, 105, 180, 0.8);
+  border: none;
+  color: white;
+  font-size: 24px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.arrow:hover {
+  background: #ff1493;
+  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.5);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.left-arrow {
+  position: absolute;
+  left: -40px;
+}
+
+.right-arrow {
+  position: absolute;
+  right: -40px;
+}
+
+.toggle-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 52px;
+  height: 28px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #ff69b4, #ff1493);
+  transition: background 0.4s ease;
+  border-radius: 34px;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: transform 0.4s ease;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+input:checked + .slider {
+  background: linear-gradient(135deg, #87ceeb, #b0e0e6);
+  box-shadow: 0 2px 8px rgba(135, 206, 235, 0.4);
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+.toggle-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+}
+
+#get-user-list {
+  margin-bottom: 10px;
+}

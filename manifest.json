@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "发帖工具",
+  "description": "发帖工具。",
+  "version": "1.0.9",
+  "author": "Raz1ner",
+  "icons": {
+    "128": "icon.png"
+  },
+  "action": {
+    "default_icon": "icon.png"
+  },
+  "options_page": "/html/options.html",
+   "side_panel": {
+    "default_path": "/html/sidepanel.html"
+  },
+  "background": {
+    "service_worker": "/js/background.js"
+  },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["/js/content.js"]
+  }],
+  "permissions": ["scripting", "activeTab", "clipboardWrite", "sidePanel", "storage"],
+  "host_permissions": ["<all_urls>"]
+}

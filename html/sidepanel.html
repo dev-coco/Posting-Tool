@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>发帖工具</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/toastify.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="mode-switch">
+        <button id="random-mode-btn" class="mode-btn active">随机</button>
+        <button id="list-mode-btn" class="mode-btn">自定</button>
+        <button id="repost-mode-btn" class="mode-btn">转发</button>
+      </div>
+    </div>
+    <div class="content">
+      <div id="content-form">
+        <div class="form-group random-mode">
+          <label class="form-label" for="topic-select">选择话题类型</label>
+          <select id="topic-select" class="form-control">
+            <option value="">请选择话题类型</option>
+          </select>
+        </div>
+        <div class="form-group list-mode hidden">
+          <label class="form-label" for="topic-select">选择话题类型</label>
+          <select id="topic-select-custom" class="form-control">
+            <option value="">请选择话题类型</option>
+          </select>
+        </div>
+        <div class="random-mode">
+          <div class="form-group">
+            <button type="button" id="generate-btn" class="btn btn-primary">随机生成内容</button>
+          </div>
+        </div>
+        <div id="list-mode-container" class="list-mode hidden">
+          <div class="form-group">
+            <label class="form-label">从列表中选择引导语</label>
+            <div class="prompt-list" id="prompt-list"></div>
+          </div>
+        </div>
+        <div class="form-group random-mode list-mode">
+          <button type="button" id="copy-btn" class="btn btn-copy">复制内容</button>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="post-link">输入贴文链接</label>
+          <input type="text" id="post-link" class="form-control" placeholder="请输入贴文链接">
+        </div>
+        <button id="submit-post-link" class="btn btn-secondary">提交内容</button>
+        <div class="">
+          <div class="image-carousel">
+            <button class="arrow left-arrow" id="prev-image">
+              <svg viewBox="0 0 24 24" width="24" height="24">
+                <path fill="currentColor" d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+              </svg>
+            </button>
+            <img id="preview-image" class="preview-image" src="">
+            <button class="arrow right-arrow" id="next-image">
+              <svg viewBox="0 0 24 24" width="24" height="24">
+                <path fill="currentColor" d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+              </svg>
+            </button>
+          </div>
+          <div id="preview-text-display" class="preview-text random-mode"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/js/toastify.js" integrity="sha-256-0oNqXz7l/x80qKH23CeLpOb0sV63mvaa9QTm9V/XJE8="></script>
+  <script src="/js/popper.js" integrity="sha-256-whL0tQWoY1Ku1iskqPFvmZ+CHsvmRWx/PIoEvIeWh4I="></script>
+  <script src="/js/tippy.js" integrity="sha-256-oVWBpeGTKMG/iBWGkQF02JnGIMFPYuFqTjUWeJY3pZ0="></script>
+  <script src="/js/sidepanel.js" integrity="sha256-dxyCvAwXzpsOByj1ixDfkvMA5HyrqCq0oNKuV/X3a1E="></script>
+</body>
+</html>
