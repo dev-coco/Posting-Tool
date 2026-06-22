@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "发帖工具",
   "description": "发帖工具。",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "author": "Raz1ner",
   "icons": {
     "128": "icon.png"
